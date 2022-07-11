@@ -23,3 +23,17 @@ $ sudo apt install jenkins
 05. Enable and start the Jenkins service
 
 $ sudo systemctl enable --now jenkins
+
+Check if Jenkins is running :
+
+$ systemctl status jenkins
+
+go to http://localhost:8080 to access Jenkins GUI
+
+a password will be asked and can be retrieved trough 
+
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+fill in credentials to create user
+
+#First Job
