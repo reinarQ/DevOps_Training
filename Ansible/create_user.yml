@@ -1,0 +1,23 @@
+- hosts: all
+  become: yes
+  gather_facts: false
+#put credentials as variable in directory which is put in .gitignore and refer to it
+  vars_files:
+    - "~/ansible/secret/credentials.yml"
+#in order to create a new user: use "user" module
+  tasks: 
+    - name: Create a login user
+      user:
+        name: "{{ user }}"  
+        password: "{{ password }} | password_hash('sha512')"
+        groups:
+          - wheel
+        state: present
+        shell: "/bin/bash"
+#add public key to authorized keys trough "authorized key" module      
+    - name: Add public key to authorized_keys
+      authorized_key:
+        exclusive: true
+        user: "{{ user }}"
+        state: present
+        key: "{{ lookup ('file', 'secret/ssh_key_vm.pub') }}"

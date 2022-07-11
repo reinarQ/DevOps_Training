@@ -1,0 +1,75 @@
+version: '3.7'
+
+services:
+  wp:
+    image: wordpress:latest
+    container_name: wordpress
+    volumes:
+      # - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - wordpress:/var/www/html
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: password
+    depends_on:
+      - db
+    networks:
+      - web
+
+  db:
+    image: mysql:8.0
+    container_name: database
+    restart: unless-stopped
+    # env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+  #    - MYSQL_USER=user
+  #    - MYSQL_PASSWORD=password
+ #     - MYSQL_DATABASE=wordpress
+#      - MYSQL_DATABASE=drupal
+    ports:
+      - 3306:3306
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - web
+
+#  proxy:
+ #   depends_on:
+  #    - wp
+     # - drupal
+  #  image: nginx:latest
+   # container_name: proxy
+    #restart: unless-stopped
+    #ports:
+    #  - "80:80"
+    #volumes:
+    #  - ./nginx-conf:/etc/ngingx/conf.d
+    #networks:
+     # - web
+
+  drupal:
+    image: drupal
+    container_name: drupal
+    restart: always
+    volumes:
+      - drupal:/var/www/html
+    ports:
+      - 8090:80
+    networks: 
+      - web
+    depends_on: 
+      - db
+
+volumes:
+  wordpress:
+  dbdata:
+  drupal:
+
+networks:
+  web:
+    driver: bridge

@@ -1,0 +1,9 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   2428  1088 ?        Sl   09:10   0:10 /init
+root         8  0.0  0.0   1752    80 ?        S    09:10   0:01 /init
+reinq     5804  0.0  0.0   7164  2120 ?        S    15:54   0:00 dbus-launch --autolaunch b9d2fcc278a730f29ea98350625e7927 --binary-syntax --close-stderr
+reinq     5805  0.0  0.0   7108  2324 ?        Ss   15:54   0:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+root      5966  0.0  0.0   2428   156 ?        Ss   15:56   0:00 /init
+root      5967  0.0  0.0   2428   156 ?        S    15:56   0:00 /init
+reinq     5968  0.0  0.0  10284  5440 pts/0    Ss   15:56   0:00 -bash
+reinq     6067  0.0  0.0  10616  3220 pts/0    R+   16:58   0:00 ps aux

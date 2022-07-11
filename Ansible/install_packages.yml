@@ -1,0 +1,15 @@
+- hosts: all
+ 
+  tasks:
+    - name: Package installation
+      apt:
+        update_cache: true
+        name:
+          - docker
+          - nginx
+          - ansible
+          - python3
+          - vagrant
+          - gnupg
+          
+        state: absent
