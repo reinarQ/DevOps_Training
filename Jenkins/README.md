@@ -37,3 +37,22 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 fill in credentials to create user
 
 #First Job
+
+follow steps in GUI to creat Job and click on 'Build Now'
+
+The repo will also be cloned locally in a reserved workspace for Jenkins.
+
+Can be accessed trough:
+
+$ cd /var/lib/jenkins/workspace/<thenameuhavegiven>
+
+Can also add custom workspace :
+
+general > advanced > Use custom workspace
+
+Accessing the console output and viewing the console output in realtime:
+- Go to Jenkins dashboard 
+- Click on build number in the build history table in the sidebar
+- Click console output in sidebar menu
+
+
