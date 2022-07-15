@@ -55,4 +55,10 @@ Accessing the console output and viewing the console output in realtime:
 - Click on build number in the build history table in the sidebar
 - Click console output in sidebar menu
 
+Configure Job to test, compile and package using mvnw
+add following commands to the build: 
+
+./mvnw package
+#this command whilt compile and create the artifact
+./mvnw test
 
