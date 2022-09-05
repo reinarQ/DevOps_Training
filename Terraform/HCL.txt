@@ -1,0 +1,7 @@
+HCL file consists of blocks and set of arguments in key value pair format representing configuration data. 
+
+<block> <parameters> {
+   key1 = value1
+   key2 = value2
+}
+
