@@ -1,4 +1,4 @@
-# Linux_Administration
+# Linux administration
 ## Description
 
 ## Resources
