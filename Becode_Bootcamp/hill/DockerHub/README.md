@@ -1,56 +1,30 @@
-# DockerHub 
+# Docker - DockerHub
 
-#creating a DockerHub account
+Type of challenge: **learning** </br>
+Duration: **1 day** </br>
+Team challenge : **solo**
 
-Create an account at Docker Hub (https://hub.docker.com/) to be able to push and pull Docker Hub images.
+The easiest way to package your code for production is by using a container image. DokerHub is like Github for container images, you can upload and share with others an unlimited amount of publicly available dockerized applications at no cost. In today's challenge we will learn about DockerHub, how to use it, how to create our own image, and publishing and pulling images to and from Docker Hub.
 
-#logging-in trough terminal
+## The mission
 
-docker loin -u <your_dockerhub_username> 
-password:
+As a newly hired DevOps Engineer at a compagny called PetClinic. The company has a new website that has been written in Java. Given this [Github Repo](https://github.com/g0t4/jgsu-spring-petclinic), you have been asked to containerize the application within a docker image and publish the produced image to DockerHub registry in order to facilitate the deployment of future releases.
 
-# creating github repo
+To help you achieve that goal, here are some of the steps you should go through:
 
-log in github - create repo
+- Make a new Github repository with the content of the original [Repo](https://github.com/g0t4/jgsu-spring-petclinic)
+- Create a DockerHub account.
+- Log in to DockerHub from your Terminal.
+- Craft a Dockerfile.
+- Run the tests and build the artifact.
+- Build the Docker image.
+- Tag your image.
+- Push your image to Dockerhub.
+- Pull your image from Dockerhub and run a container localy.
 
-# clone repo
+## Complementary Resources
 
-git clone 
-
-# craft dockerfile
-
-Docker builds images by reading instructions from a Dockerfile. A Dockerfile is a simple text file that contains instructions that can be executed on the command line. Using docker build, you can start a build that executes all of the command-line instructions contained in the Dockerfile.
-
-The docker build command builds Docker images from a Dockerfile and a “context”. A build’s context is the set of files located in the specified PATH or URL. The Docker build process can access any of the files located in this context.
-
-# create artifact 
-
-the artifact (.JAR) file is created after excecuting the following CMD:
-./mvnw -T 1C package 
-mvn package (locally)
-
-located at /target spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar
-
-# build dockerfile
-
-The docker build command builds Docker images from a Dockerfile and a “context”. A build’s context is the set of files located in the specified PATH or URL. The Docker build process can access any of the files located in this context.
-
- $ docker build --tag petclinic-docker 
-
- this command builds the image and attaches the tag "petclinic-docker"
-
- # create image
-
-A container is a normal operating system process except that this process is isolated and has its own file system, its own networking, and its own isolated process tree separated from the host.
-
-To run an image inside a container, we use the docker run command. The docker run command requires one parameter which is the name of the image.
-
-$docker run <name of the image>
-
-* REST server 
-
-make a GET request to the server using the curl command.
-
-to list images:
-$docker images
+* [Docker documentation](https://docs.docker.com/)
+* [Create your own image](https://docs.docker.com/develop/develop-images/baseimages/)
+* [DockerHub QuickStart](https://docs.docker.com/docker-hub/)
 

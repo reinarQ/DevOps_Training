@@ -1,5 +1,3 @@
-# Jenkins
-
 Installation for Debian 10:
 
 01. As Jenkins is written in Java we need to install Java in order for Jenkins to run
@@ -61,4 +59,3 @@ add following commands to the build:
 ./mvnw package
 #this command whilt compile and create the artifact
 ./mvnw test
-
