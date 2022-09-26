@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Prometheus 101
+=======
+#Prometheus 101
+>>>>>>> d78844b55ebc0b3ac703b2b29701de9ec089c322
 
 Module: **Monitoring** </br>
 Competency: is able to understand how to Prometheus works and how to integrate it into your projects] </br>
