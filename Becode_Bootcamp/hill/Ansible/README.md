@@ -32,5 +32,5 @@ By the end of the challenge, you must be able to delete and re-deploy you new VM
 
 ## RESOURCES
 
-- [https://docs.ansible.com/ansible/2.9/](https://docs.ansible.com/ansible/2.9/)# Ansible
+- [https://docs.ansible.com/ansible/2.9/](https://docs.ansible.com/ansible/2.9/)
 

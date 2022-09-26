@@ -1,4 +1,4 @@
- Prometheus 101
+# Prometheus 101
 
 Module: **Monitoring** </br>
 Competency: is able to understand how to Prometheus works and how to integrate it into your projects] </br>
