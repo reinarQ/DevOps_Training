@@ -1,0 +1,9 @@
+#! /bin/bash
+
+NUMBER=$1
+
+while  [ $NUMBER <= 10 ]
+do
+        echo "loop $NUMBER"
+        ((NUMBER++))
+done
